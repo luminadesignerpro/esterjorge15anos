@@ -16,7 +16,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        Você está convidada para celebrar
+        Você está convidado(a) para celebrar
       </motion.p>
 
       <motion.div
