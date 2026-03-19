@@ -20,67 +20,73 @@ const HeroSection = () => {
       </motion.p>
 
       <motion.div
-        className="relative mb-6"
-        initial={{ opacity: 0, scale: 0.5, rotateY: 90 }}
-        animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-        transition={{ delay: 0.35, duration: 1.2, type: "spring", bounce: 0.3 }}
+        className="relative mb-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 1 }}
       >
-        {/* Rotating glow ring */}
-        <div
-          className="absolute inset-[-8px] rounded-full"
+        {/* Cinematic light sweep */}
+        <motion.div
+          className="absolute inset-[-20px] rounded-full"
           style={{
-            background: "conic-gradient(from 0deg, transparent, rgba(200,168,233,0.5), rgba(124,58,191,0.4), transparent, rgba(200,168,233,0.3), transparent)",
-            animation: "spin-slow 6s linear infinite",
-            filter: "blur(3px)",
+            background: "conic-gradient(from 0deg, transparent 0%, rgba(200,168,233,0.45) 15%, transparent 30%, transparent 70%, rgba(124,58,191,0.3) 85%, transparent 100%)",
+            filter: "blur(6px)",
+          }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+        />
+        {/* Soft ambient glow */}
+        <div
+          className="absolute inset-[-24px] rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(124,58,191,0.2) 55%, transparent 70%)",
+            animation: "photo-pulse 4s ease-in-out infinite",
           }}
         />
-        {/* Pulsing outer glow */}
+        {/* Photo container - bigger & cinematic Ken Burns */}
         <div
-          className="absolute inset-[-14px] rounded-full"
+          className="relative w-[min(260px,60vw)] h-[min(260px,60vw)] rounded-full overflow-hidden mx-auto"
           style={{
-            background: "radial-gradient(circle, rgba(124,58,191,0.25) 60%, transparent 70%)",
-            animation: "photo-pulse 3s ease-in-out infinite",
-          }}
-        />
-        <div
-          className="relative w-[min(180px,45vw)] h-[min(180px,45vw)] rounded-full overflow-hidden mx-auto"
-          style={{
-            border: "3px solid rgba(200,168,233,0.45)",
-            boxShadow: "0 0 40px rgba(124,58,191,0.4), 0 0 80px rgba(124,58,191,0.15), inset 0 0 20px rgba(124,58,191,0.1)",
+            border: "3px solid rgba(200,168,233,0.4)",
+            boxShadow: "0 0 50px rgba(124,58,191,0.45), 0 0 100px rgba(124,58,191,0.15), inset 0 0 30px rgba(124,58,191,0.12)",
           }}
         >
           <motion.img
             src={estherPhoto}
             alt="Esther"
             className="w-full h-full object-cover object-top"
-            initial={{ scale: 1.3 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.6, duration: 1.5, ease: "easeOut" }}
+            initial={{ scale: 1.35, filter: "brightness(0.3)" }}
+            animate={{ scale: 1.05, filter: "brightness(1)" }}
+            transition={{ delay: 0.5, duration: 2.5, ease: "easeOut" }}
+            style={{ animation: "ken-burns 12s ease-in-out 3s infinite alternate" }}
+          />
+          {/* Cinematic vignette */}
+          <div
+            className="absolute inset-0 rounded-full pointer-events-none"
+            style={{
+              background: "radial-gradient(circle, transparent 55%, rgba(20,5,40,0.4) 100%)",
+            }}
           />
         </div>
         {/* Sparkle dots */}
-        {[0, 60, 120, 180, 240, 300].map((deg, i) => (
+        {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, i) => (
           <motion.div
             key={deg}
-            className="absolute w-1.5 h-1.5 rounded-full"
+            className="absolute w-1 h-1 rounded-full"
             style={{
-              background: "rgba(200,168,233,0.8)",
+              background: "rgba(200,168,233,0.9)",
               top: "50%",
               left: "50%",
-              boxShadow: "0 0 6px rgba(200,168,233,0.6)",
+              boxShadow: "0 0 8px rgba(200,168,233,0.5)",
             }}
             initial={{ opacity: 0, x: 0, y: 0, scale: 0 }}
             animate={{
               opacity: [0, 1, 0],
-              x: Math.cos((deg * Math.PI) / 180) * 110,
-              y: Math.sin((deg * Math.PI) / 180) * 110,
-              scale: [0, 1.2, 0],
+              x: Math.cos((deg * Math.PI) / 180) * 150,
+              y: Math.sin((deg * Math.PI) / 180) * 150,
+              scale: [0, 1, 0],
             }}
-            transition={{
-              delay: 1 + i * 0.12,
-              duration: 1.2,
-              ease: "easeOut",
-            }}
+            transition={{ delay: 1.2 + i * 0.1, duration: 1.4, ease: "easeOut" }}
           />
         ))}
       </motion.div>
