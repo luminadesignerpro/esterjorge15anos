@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Countdown from "./Countdown";
+import estherPhoto from "@/assets/esther.jpeg";
 
 const HeroSection = () => {
   return (
@@ -19,13 +20,24 @@ const HeroSection = () => {
       </motion.p>
 
       <motion.div
-        className="w-[min(155px,40vw)] mb-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.35, duration: 0.8 }}
-        style={{ animation: "logo-float 4s ease-in-out 1.2s infinite" }}
+        className="mb-6"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.35, duration: 0.9 }}
       >
-        <span className="text-6xl">👑</span>
+        <div
+          className="w-[min(180px,45vw)] h-[min(180px,45vw)] rounded-full overflow-hidden mx-auto"
+          style={{
+            border: "3px solid rgba(200,168,233,0.4)",
+            boxShadow: "0 0 40px rgba(124,58,191,0.35), 0 0 80px rgba(124,58,191,0.15)",
+          }}
+        >
+          <img
+            src={estherPhoto}
+            alt="Esther"
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
       </motion.div>
 
       <motion.h1
