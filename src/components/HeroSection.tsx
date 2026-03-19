@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Countdown from "./Countdown";
 import estherPhoto from "@/assets/esther.jpeg";
+import brasao from "@/assets/brasao.png";
 
 const HeroSection = () => {
   return (

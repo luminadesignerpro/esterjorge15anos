@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import brasao from "@/assets/brasao.png";
 
 interface EnvelopeProps {
   onOpen: () => void;
