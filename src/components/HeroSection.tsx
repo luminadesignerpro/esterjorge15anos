@@ -15,7 +15,7 @@ const HeroSection = () => {
         src={brasao}
         alt="Brasão Esther"
         className="w-[min(180px,45vw)] mx-auto mb-4"
-        style={{ mixBlendMode: "screen", filter: "drop-shadow(0 0 20px rgba(200,168,233,0.3))" }}
+        style={{ filter: "drop-shadow(0 0 20px rgba(200,168,233,0.3))" }}
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.15, duration: 1, type: "spring" }}
