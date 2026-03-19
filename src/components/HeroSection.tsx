@@ -11,11 +11,21 @@ const HeroSection = () => {
         background: "radial-gradient(ellipse at 50% 0%, rgba(124,58,191,0.2) 0%, transparent 60%)",
       }}
     >
+      <motion.img
+        src={brasao}
+        alt="Brasão Esther"
+        className="w-[min(180px,45vw)] mx-auto mb-4"
+        style={{ mixBlendMode: "screen", filter: "drop-shadow(0 0 20px rgba(200,168,233,0.3))" }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.15, duration: 1, type: "spring" }}
+      />
+
       <motion.p
         className="font-display text-[0.7rem] tracking-[0.45em] uppercase text-light-purple mb-5"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
       >
         Você está convidado(a) para celebrar
       </motion.p>
@@ -24,7 +34,7 @@ const HeroSection = () => {
         className="relative mb-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
+        transition={{ delay: 0.4, duration: 1 }}
       >
         {/* Cinematic light sweep */}
         <motion.div
@@ -44,7 +54,7 @@ const HeroSection = () => {
             animation: "photo-pulse 4s ease-in-out infinite",
           }}
         />
-        {/* Photo container - bigger & cinematic Ken Burns */}
+        {/* Photo container */}
         <div
           className="relative w-[min(260px,60vw)] h-[min(260px,60vw)] rounded-full overflow-hidden mx-auto"
           style={{
@@ -58,10 +68,9 @@ const HeroSection = () => {
             className="w-full h-full object-cover object-top"
             initial={{ scale: 1.35, filter: "brightness(0.3)" }}
             animate={{ scale: 1.05, filter: "brightness(1)" }}
-            transition={{ delay: 0.5, duration: 2.5, ease: "easeOut" }}
+            transition={{ delay: 0.6, duration: 2.5, ease: "easeOut" }}
             style={{ animation: "ken-burns 12s ease-in-out 3s infinite alternate" }}
           />
-          {/* Cinematic vignette */}
           <div
             className="absolute inset-0 rounded-full pointer-events-none"
             style={{
@@ -91,15 +100,6 @@ const HeroSection = () => {
           />
         ))}
       </motion.div>
-
-      <motion.img
-        src={brasao}
-        alt="Brasão Esther"
-        className="w-[min(90px,22vw)] mx-auto mb-2 drop-shadow-lg"
-        initial={{ opacity: 0, scale: 0.6 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8, duration: 0.9, type: "spring" }}
-      />
 
       <motion.h1
         className="font-script text-[clamp(4rem,14vw,8.5rem)] text-foreground leading-[0.95]"
