@@ -98,7 +98,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
               }}
             >
               <span className="font-script text-[clamp(1.3rem,4.5vw,2rem)] text-soft-purple text-center px-4">
-                Você está convidada ✨
+                Você está convidado(a) ✨
               </span>
             </div>
 
