@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Countdown from "./Countdown";
 import estherPhoto from "@/assets/esther.jpeg";
+import brasao from "@/assets/brasao.png";
 
 const HeroSection = () => {
   return (
@@ -90,6 +91,15 @@ const HeroSection = () => {
           />
         ))}
       </motion.div>
+
+      <motion.img
+        src={brasao}
+        alt="Brasão Esther"
+        className="w-[min(90px,22vw)] mx-auto mb-2 drop-shadow-lg"
+        initial={{ opacity: 0, scale: 0.6 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8, duration: 0.9, type: "spring" }}
+      />
 
       <motion.h1
         className="font-script text-[clamp(4rem,14vw,8.5rem)] text-foreground leading-[0.95]"

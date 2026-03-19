@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import brasao from "@/assets/brasao.png";
 
 interface EnvelopeProps {
   onOpen: () => void;
@@ -106,16 +107,14 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
             <div
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-[5] overflow-hidden"
               style={{
-                width: "min(110px, 27vw)",
-                height: "min(110px, 27vw)",
-                background: "radial-gradient(circle at 35% 30%, hsl(45 75% 69%), hsl(43 60% 55%) 55%, hsl(35 50% 35%))",
-                boxShadow: "0 5px 20px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.2)",
+                width: "min(120px, 30vw)",
+                height: "min(120px, 30vw)",
                 animation: "seal-pulse 3s ease-in-out infinite",
                 opacity: isOpening ? 0 : 1,
                 transition: "opacity 0.45s",
               }}
             >
-              <span className="text-3xl">💜</span>
+              <img src={brasao} alt="Brasão Esther" className="w-full h-full object-contain drop-shadow-lg" />
             </div>
           </div>
         </div>
