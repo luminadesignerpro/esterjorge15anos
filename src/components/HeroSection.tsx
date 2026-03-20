@@ -102,9 +102,13 @@ const HeroSection = () => {
       </motion.div>
 
       <motion.h1
-        className="font-script text-[clamp(4rem,14vw,8.5rem)] text-foreground leading-[0.95]"
+        className="font-script text-[clamp(4rem,14vw,8.5rem)] leading-[0.95]"
         style={{
-          textShadow: "0 0 45px rgba(200,168,233,0.4), 0 3px 20px rgba(26,5,53,0.5)",
+          background: "linear-gradient(140deg, hsl(45 75% 69%), hsl(43 60% 55%) 45%, hsl(35 45% 40%))",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
+          textShadow: "none",
         }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -125,7 +129,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.65, duration: 0.9 }}
       >
-        15
+        XV
       </motion.div>
 
       <motion.div
