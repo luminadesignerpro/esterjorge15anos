@@ -22,6 +22,7 @@ const initialGifts: Gift[] = [
   { id: 8, icon: "📿", name: "Colar", size: "", taken: false, giverName: "" },
   { id: 9, icon: "💄", name: "Maquiagem", size: "", taken: false, giverName: "" },
   { id: 10, icon: "🌸", name: "Perfumaria", size: "", taken: false, giverName: "" },
+  { id: 11, icon: "💸", name: "Pix", size: "Chave: (85) 98114-91614", taken: false, giverName: "" },
 ];
 
 const GiftsSection = () => {
@@ -109,8 +110,24 @@ const GiftsSection = () => {
             }}
           >
             <p className="font-serif text-base text-lavender mb-4 leading-relaxed">
-              Você quer reservar <strong className="text-gold-light">{selected.name}</strong>?
-              <br />Coloque seu nome para confirmar:
+              {selected.id === 11 ? (
+                <>
+                  Que ótimo! Para presentear via <strong className="text-gold-light">Pix</strong>, use a chave abaixo:
+                  <br />
+                  <span
+                    className="block mt-2 mb-1 font-mono text-gold-light text-lg tracking-widest"
+                    style={{ letterSpacing: "0.1em" }}
+                  >
+                    (85) 98114-91614
+                  </span>
+                  Coloque seu nome para registrar:
+                </>
+              ) : (
+                <>
+                  Você quer reservar <strong className="text-gold-light">{selected.name}</strong>?
+                  <br />Coloque seu nome para confirmar:
+                </>
+              )}
             </p>
             <input
               value={giverInput}
