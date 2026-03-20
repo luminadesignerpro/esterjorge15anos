@@ -22,7 +22,7 @@ const initialGifts: Gift[] = [
   { id: 8, icon: "📿", name: "Colar", size: "", taken: false, giverName: "" },
   { id: 9, icon: "💄", name: "Maquiagem", size: "", taken: false, giverName: "" },
   { id: 10, icon: "🌸", name: "Perfumaria", size: "", taken: false, giverName: "" },
-  { id: 11, icon: "💸", name: "Pix", size: "Chave: (85) 98114-91614", taken: false, giverName: "" },
+  { id: 11, icon: "💸", name: "Pix", size: "Chave: (85) 98114-9161", taken: false, giverName: "" },
 ];
 
 const GiftsSection = () => {
@@ -118,7 +118,7 @@ const GiftsSection = () => {
                     className="block mt-2 mb-1 font-mono text-gold-light text-lg tracking-widest"
                     style={{ letterSpacing: "0.1em" }}
                   >
-                    (85) 98114-91614
+                    (85) 98114-9161
                   </span>
                   Coloque seu nome para registrar:
                 </>
