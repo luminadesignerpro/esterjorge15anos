@@ -15,13 +15,19 @@ const RSVPSection = () => {
     setThankName(name.trim());
     setIsAttending(attending === "yes");
     setSubmitted(true);
+
+    const msg = attending === "yes"
+      ? `Olá! Meu nome é ${name.trim()} e confirmo minha presença na festa de 15 anos da Esther! 🎉`
+      : `Olá! Meu nome é ${name.trim()}. Infelizmente não poderei comparecer à festa de 15 anos da Esther.`;
+    const url = `https://wa.me/5585987383965?text=${encodeURIComponent(msg)}`;
+    setTimeout(() => window.open(url, "_blank"), 800);
   };
 
   return (
     <section className="scroll-reveal py-[4.5rem] px-6 max-w-[500px] mx-auto text-center pb-24">
       <SectionHeader tag="Confirme sua presença" title="RSVP" titleSize="clamp(1.9rem,6.5vw,3rem)" />
       <p className="text-[0.95rem] text-light-purple mb-7 leading-relaxed">
-        Confirme até <strong className="text-gold-light">19 de Junho de 2026</strong>.
+        Confirme até <strong className="text-gold-light">16 de Junho de 2026</strong>.
       </p>
 
       <button
