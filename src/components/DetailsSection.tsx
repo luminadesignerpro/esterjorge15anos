@@ -4,7 +4,7 @@ const cards = [
   { icon: "📅", label: "Data", value: "26 de Junho", sub: "Sexta-feira, 2026" },
   { icon: "🕖", label: "Horário", value: "19h30", sub: "Pontualmente" },
   { icon: "🌹", label: "Local", value: "Espaço North Buffet", sub: "Av. Mister Hull, 4758\nAntônio Bezerra · CE" },
-  { icon: "👗", label: "Traje", value: "Traje Festivo", sub: "Tons lilás & dourado" },
+  { icon: "👗", label: "Traje", value: "Esporte Fino", sub: "⚠️ Não usar roupas em tons de roxo, lilás ou rosa" },
 ];
 
 const DetailsSection = () => (
