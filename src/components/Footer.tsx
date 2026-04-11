@@ -7,7 +7,7 @@ const Footer = () => (
     }}
   >
     <p
-      className="font-script text-2xl mb-1"
+      className="font-script text-3xl mb-1"
       style={{
         background: "linear-gradient(140deg, hsl(45 75% 69%), hsl(43 60% 55%) 45%, hsl(35 45% 40%))",
         WebkitBackgroundClip: "text",
@@ -17,7 +17,7 @@ const Footer = () => (
     >
       Esther Jorge Cavalcante
     </p>
-    <p className="font-display text-[0.65rem] tracking-[0.22em] uppercase text-light-purple/20">
+    <p className="font-display text-[0.85rem] tracking-[0.22em] uppercase text-light-purple/20">
       Festa de 15 Anos · 2026
     </p>
   </footer>
