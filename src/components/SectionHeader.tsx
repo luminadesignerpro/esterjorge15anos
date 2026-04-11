@@ -6,7 +6,7 @@ interface SectionHeaderProps {
 
 const SectionHeader = ({ tag, title, titleSize }: SectionHeaderProps) => (
   <>
-    <p className="font-display text-[0.65rem] tracking-[0.38em] uppercase text-gold mb-2">
+    <p className="font-display text-[0.85rem] tracking-[0.38em] uppercase text-gold mb-2">
       {tag}
     </p>
     <h2
