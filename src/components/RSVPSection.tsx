@@ -26,13 +26,13 @@ const RSVPSection = () => {
   return (
     <section className="scroll-reveal py-[4.5rem] px-6 max-w-[500px] mx-auto text-center pb-24">
       <SectionHeader tag="Confirme sua presença" title="RSVP" titleSize="clamp(1.9rem,6.5vw,3rem)" />
-      <p className="text-[0.95rem] text-light-purple mb-7 leading-relaxed">
+      <p className="text-[1.1rem] text-light-purple mb-7 leading-relaxed">
         Confirme até <strong className="text-gold-light">16 de Junho de 2026</strong>.
       </p>
 
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center gap-2 rounded-full px-7 py-3 font-display text-[0.78rem] tracking-[0.18em] uppercase text-lavender cursor-pointer transition-all hover:-translate-y-0.5 mb-7"
+        className="inline-flex items-center gap-2 rounded-full px-7 py-3 font-display text-[0.95rem] tracking-[0.18em] uppercase text-lavender cursor-pointer transition-all hover:-translate-y-0.5 mb-7"
         style={{
           background: "linear-gradient(135deg, rgba(124,58,191,0.38), rgba(74,26,120,0.55))",
           border: "1px solid rgba(200,168,233,0.32)",
