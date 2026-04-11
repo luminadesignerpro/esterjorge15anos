@@ -36,10 +36,10 @@ const Countdown = () => {
             border: "1px solid rgba(200,168,233,0.18)",
           }}
         >
-          <span className="font-serif text-[2.1rem] font-light text-foreground leading-none">
+          <span className="font-serif text-[2.6rem] font-light text-foreground leading-none">
             {String(item.value).padStart(2, "0")}
           </span>
-          <span className="text-[0.58rem] tracking-[0.22em] uppercase text-light-purple mt-1">
+          <span className="text-[0.75rem] tracking-[0.22em] uppercase text-light-purple mt-1">
             {item.label}
           </span>
         </div>
@@ -49,3 +49,4 @@ const Countdown = () => {
 };
 
 export default Countdown;
+
