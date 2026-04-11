@@ -22,11 +22,11 @@ const DetailsSection = () => (
           }}
         >
           <div className="text-[1.6rem] mb-2">{c.icon}</div>
-          <div className="font-display text-[0.58rem] tracking-[0.2em] uppercase text-gold mb-1">
+          <div className="font-display text-[0.75rem] tracking-[0.2em] uppercase text-gold mb-1">
             {c.label}
           </div>
-          <div className="text-base font-semibold text-foreground leading-snug">{c.value}</div>
-          <div className="text-[0.82rem] text-light-purple mt-0.5 whitespace-pre-line">{c.sub}</div>
+          <div className="text-lg font-semibold text-foreground leading-snug">{c.value}</div>
+          <div className="text-[0.95rem] text-light-purple mt-0.5 whitespace-pre-line">{c.sub}</div>
         </div>
       ))}
     </div>
@@ -35,7 +35,7 @@ const DetailsSection = () => (
         href="https://maps.google.com/?q=Av+Mister+Hull+4758+Antonio+Bezerra+Fortaleza+CE"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 font-display text-[0.75rem] tracking-[0.12em] text-lavender no-underline transition-all hover:-translate-y-0.5"
+        className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 font-display text-[0.95rem] tracking-[0.12em] text-lavender no-underline transition-all hover:-translate-y-0.5"
         style={{
           background: "rgba(74,26,120,0.32)",
           border: "1px solid rgba(200,168,233,0.22)",
