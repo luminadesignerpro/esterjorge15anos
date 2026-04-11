@@ -2,7 +2,7 @@ import SectionHeader from "./SectionHeader";
 
 const MessageSection = () => (
   <section className="scroll-reveal py-[4.5rem] px-6 max-w-[650px] mx-auto text-center">
-    <p className="font-display text-[0.65rem] tracking-[0.38em] uppercase text-gold mb-2 text-center">
+    <p className="font-display text-[0.85rem] tracking-[0.38em] uppercase text-gold mb-2 text-center">
       Uma mensagem especial
     </p>
     <div className="flex items-center gap-3 max-w-[180px] mx-auto mb-10">
@@ -17,7 +17,7 @@ const MessageSection = () => (
       className="h-px max-w-[150px] mx-auto mb-5"
       style={{ background: "linear-gradient(to right, transparent, rgba(124,58,191,0.4), transparent)" }}
     />
-    <p className="font-script text-[1.45rem] text-gold-light">— Família Cavalcante</p>
+    <p className="font-script text-[1.8rem] text-gold-light">— Família Cavalcante</p>
   </section>
 );
 
