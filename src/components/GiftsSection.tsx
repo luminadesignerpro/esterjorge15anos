@@ -45,13 +45,13 @@ const GiftsSection = () => {
   return (
     <section className="scroll-reveal py-[4.5rem] px-6 max-w-[700px] mx-auto text-center">
       <SectionHeader tag="Sugestão de Presentes" title="Lista de Presentes" titleSize="clamp(1.9rem,6vw,3rem)" />
-      <p className="text-[0.95rem] text-light-purple mb-7 leading-relaxed">
+      <p className="text-[1.1rem] text-light-purple mb-7 leading-relaxed">
         Clique para ver os presentes e escolher o que vai dar 🎁
       </p>
 
       <button
         onClick={() => { setOpen(!open); setSelected(null); setConfirmedGift(null); }}
-        className="inline-flex items-center gap-2 rounded-full px-7 py-3 font-display text-[0.78rem] tracking-[0.18em] uppercase text-lavender cursor-pointer transition-all hover:-translate-y-0.5 mb-7"
+        className="inline-flex items-center gap-2 rounded-full px-7 py-3 font-display text-[0.95rem] tracking-[0.18em] uppercase text-lavender cursor-pointer transition-all hover:-translate-y-0.5 mb-7"
         style={{
           background: "linear-gradient(135deg, rgba(124,58,191,0.38), rgba(74,26,120,0.55))",
           border: "1px solid rgba(200,168,233,0.32)",
@@ -91,10 +91,10 @@ const GiftsSection = () => {
                   </div>
                 )}
                 <div className="text-[1.6rem] mb-1">{g.icon}</div>
-                <div className="text-[0.88rem] text-lavender leading-snug">{g.name}</div>
-                {g.size && <div className="text-[0.72rem] text-light-purple mt-0.5">{g.size}</div>}
+                <div className="text-[0.95rem] text-lavender leading-snug">{g.name}</div>
+                {g.size && <div className="text-[0.82rem] text-light-purple mt-0.5">{g.size}</div>}
                 {g.taken && (
-                  <div className="text-[0.65rem] text-light-purple italic mt-1">Reservado por {g.giverName}</div>
+                  <div className="text-[0.75rem] text-light-purple italic mt-1">Reservado por {g.giverName}</div>
                 )}
               </div>
             ))}
@@ -187,3 +187,4 @@ const GiftsSection = () => {
 };
 
 export default GiftsSection;
+
