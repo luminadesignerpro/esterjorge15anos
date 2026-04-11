@@ -22,7 +22,7 @@ const HeroSection = () => {
       />
 
       <motion.p
-        className="font-display text-[0.7rem] tracking-[0.45em] uppercase text-light-purple mb-5"
+        className="font-display text-[0.95rem] tracking-[0.45em] uppercase text-light-purple mb-5"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
@@ -152,7 +152,7 @@ const HeroSection = () => {
       />
 
       <motion.p
-        className="font-display text-[clamp(0.8rem,2.4vw,1rem)] tracking-[0.12em] text-lavender mb-8"
+        className="font-display text-[clamp(1.1rem,3vw,1.4rem)] tracking-[0.12em] text-lavender mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
@@ -174,7 +174,7 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
-        <span className="font-display text-[0.62rem] tracking-[0.28em] uppercase text-light-purple/40">
+        <span className="font-display text-[0.82rem] tracking-[0.28em] uppercase text-light-purple/40">
           Role para baixo
         </span>
         <span
