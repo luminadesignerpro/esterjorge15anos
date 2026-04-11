@@ -5,7 +5,7 @@ const MusicButton = ({ visible }: { visible: boolean }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio("/musica.mp3");
+   audioRef.current = new Audio("/esterjorge15anos/musica.mp3");
     audioRef.current.loop = true;
     audioRef.current.preload = "auto";
     return () => {
